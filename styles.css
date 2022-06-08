@@ -345,12 +345,13 @@ footer li {
         display: none;
     }
 
+
     .mobile-nav {
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(4, 1fr);
         align-items: center;
-        grid-gap: 100%;
-        margin: 2% 0;
+        grid-gap: 70%;
+        margin: 2% 3%;
     }
 
     /* Hero section */
