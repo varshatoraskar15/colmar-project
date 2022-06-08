@@ -35,6 +35,7 @@ nav li {
 
 nav a {
     text-decoration: none;
+    color: var(--dark-grey);
 }
 
 .logo {
@@ -94,7 +95,8 @@ Hero section
 News section
 */
 .news-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
     color: var(--dark-grey);
 }
 
@@ -103,16 +105,15 @@ News section
 .news-left {
     display: flex;
     flex-direction: column;
-    flex: 2;
     padding: 2%;
 }
 
-.news-left img{
-    width: 80%;
+.news-left img {
+    width: 100%;
 }
 
 .news-left-info {
-    margin: 0 10% 0 0;
+    padding-bottom: 2%;
 }
 
 .news-left-info h2,p {
@@ -154,7 +155,8 @@ News section
 }
 
 .orientation-info, .campus-info, .guest-info {
-   padding: 8% 5%; 
+   padding: 0 5%; 
+   margin-top: 4%;
    font-size: 80%;
 }
 
@@ -226,11 +228,11 @@ Thesis exhibit section
     color: var(--dark-grey);
     text-align: center;
     padding: 5%;
-    
 }
 
-.thesis-flexbox {
-    display: flex;
+.thesis-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
 }
 
 
@@ -238,20 +240,24 @@ Thesis exhibit section
 .urban-container {
     display: flex;
     flex-direction: column;
-    padding-left: 2%;
+    padding: 0 3%;
 }
 
 .urban-video > video {
-    width: 80%;
+    width: 100%;
 }
 
 .urban-info {
-    padding-top: 2%;
-    width: 80%;
+    padding: 1% 0 5% 0;
 }
 
 .urban-info > * {
     padding: 1% 0;
+}
+
+.urban-info > p {
+    font-size: small;
+    color: var(--dark-grey);
 }
 
 /**** Other thesis container ****/
@@ -278,11 +284,16 @@ Thesis exhibit section
     background-color: var(--lightest-grey);
 }
 
-.fisma-info {
+.fisma-info, .nt-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
+.fisma-info > *, .nt-info>* {
+    padding: 1%;
+    margin: 5% 8%;
+}
 
 /* 
 Footer 
@@ -291,6 +302,7 @@ footer {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid var(--light-grey);
+    margin-bottom: 1%;
 }
 
 footer > * {
@@ -303,6 +315,11 @@ footer > * {
 footer ul {
     display: flex;
     list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--dark-grey)
 }
 
 footer li {
