@@ -56,6 +56,10 @@ nav a {
     color: var(--light-grey);
 }
 
+.mobile-nav {
+    display: none;
+}
+
 /* 
 Hero section 
 */
@@ -63,6 +67,14 @@ Hero section
     background-color: var(--lighter-grey);
     display: flex;
     padding: 5% 3%;
+}
+
+.hero-container button {
+    background-color: var(--dark-grey);
+    width: 100%;
+    height: 3rem;
+    cursor: pointer;
+    color: white;
 }
 
 .hero-left img {
@@ -77,13 +89,9 @@ Hero section
     padding: 0 2%;
 }
 
-.hero-right > h1, h4, button {
+.hero-right > h1, h4 {
     padding: 5%;
     color: var(--dark-grey)
-}
-
-.hero-right > button {
-    background-color: var(--dark-grey);
 }
 
 .hero-right a {
@@ -220,6 +228,9 @@ Start learning section
     color: var(--light-grey);
 }
 
+.sl-mobile {
+    display: none;
+}
 
 /* 
 Thesis exhibit section 
@@ -327,8 +338,115 @@ footer li {
 }
 
 
+/* Mobile responsiveness */
+@media only screen and (max-width: 580px) {
+    /* Navigation bar */
+    nav > .logo, nav > ul {
+        display: none;
+    }
 
+    .mobile-nav {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        align-items: center;
+        grid-gap: 100%;
+        margin: 2% 0;
+    }
 
+    /* Hero section */
+    .hero-container {
+        flex-direction: column;
+        padding: 0 0 5% 0;
+    }
 
+    .hero-container img {
+        width: 100%;
+    }
 
+    .hero-right button {
+        background-color: var(--light-grey);
+        border: none;
+        font-size: 100%;
+    } 
 
+    /* News section */
+    .news-left {
+        display: none;
+    }
+
+    .news-container {
+        grid-template-columns: 1fr;
+    }
+
+    .news-right > * {
+        display: flex;
+        flex-direction: column;
+        font-size: 120%;
+    }
+
+    .orientation-left-desktop, .campus-left-desktop, .guest-left-desktop {
+        display: none;
+    }
+
+    .news-right img {
+        width: 100%;
+    }
+
+    .orientation-left-mobile, .campus-left-mobile, .guest-left-mobile {
+        display: inline;
+    }
+
+    .guest {
+        background-color: white;
+    }
+
+    /* Start learning section */
+    .sl-container {
+        background-color: white;
+    }
+
+    .sl-grid-wrapper {
+        display: none;
+    }
+
+    .sl-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sl-mobile > * {
+        background-color: var(--lightest-grey);
+        color: var(--dark-grey);
+        height: 5rem;
+        margin: 1%;
+        text-decoration: none;
+    }
+
+    .sl-mobile h1 {
+        padding: 5%;
+    }
+
+    /* Thesis exhibit section */
+    .urban-info, .other-thesis-container {
+        display: none;
+    }
+
+    .thesis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer section */
+    footer {
+        padding: 10% 0 2%;
+    }
+
+    footer ul {
+        display: none;
+    }
+
+    footer p {
+        font-size: 100%;
+    }
+    
+}
+  
