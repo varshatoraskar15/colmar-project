@@ -78,7 +78,7 @@ Hero section
 }
 
 .hero-left img {
-    width: 80%;
+    width: 85%;
 }
 
 .hero-right {
@@ -199,7 +199,7 @@ Start learning section
 /**** Start learning grid ****/
 .sl-grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     grid-gap: 2%;
 }
 
