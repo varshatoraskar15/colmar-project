@@ -199,7 +199,8 @@ Start learning section
 /**** Start learning grid ****/
 .sl-grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2%;
 }
 
@@ -344,7 +345,6 @@ footer li {
     nav > .logo, nav > ul {
         display: none;
     }
-
 
     .mobile-nav {
         display: grid;
